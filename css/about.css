@@ -1,0 +1,333 @@
+@import "bourbon";
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+body {
+  background-color: #0e1427;
+  text-align: center;
+  color: #fff;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 70px;
+}
+
+img {
+  height: 300px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* type-writer effect */
+.typewrite {
+  color: #950740;
+  text-decoration: none;
+  margin-top: 2em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #5cdb95;
+}
+
+h3.hglight {
+  text-transform: uppercase;
+  color: #6f2232;
+  font-family: cursive;
+  margin-left: 1.4em;
+}
+
+h3.about {
+  color: #c3074f;
+  font-size: 45px;
+  padding-left: 1em;
+}
+
+h4.degree {
+  font-size: 25px;
+  font-weight: bold;
+  color: antiquewhite;
+}
+p.college {
+  line-height: 1.2em;
+  margin-left: 0.2em;
+}
+
+h4 {
+  color: #4e4e50;
+  font-weight: bolder;
+}
+
+/* Skills */
+.tech-icon {
+  height: 50px;
+  width: 55px;
+}
+.interests .icon-box {
+  display: inline-flex;
+  align-items: center;
+}
+img.tech-icon {
+  position: relative;
+  margin-right: auto;
+  margin-left: 2em;
+  left: 3px;
+}
+
+h3.xd {
+  color: #adadad;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  padding-left: 0.5rem;
+  line-height: 1;
+  font-size: 20px;
+}
+
+/*Projects */
+.main {
+  height: 125vh;
+  width: 100%;
+  padding-left: 35px;
+  display: flex;
+}
+
+.card {
+  margin: 100px auto 0;
+  display: inline-block;
+  width: 400px;
+  height: 600px;
+  perspective: 700px;
+  align-items: center;
+  background: #0e1427;
+  border: 1px solid #fff;
+}
+
+/** @format */
+
+.flip-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.card_front,
+.card_back {
+  width: 320px;
+  height: 480px;
+}
+
+.flipper {
+  transition: all 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.card_front,
+.card_back {
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.card_front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 1.3em;
+}
+
+.card_back {
+  transform: rotateY(180deg);
+  background-image: linear-gradient(to right, #07d697, #0ccfa3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Sen", sans-serif;
+}
+
+.card_back p {
+  padding: 10px 30px;
+  text-align: center;
+  line-height: 1.68;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.card_back button {
+  padding: 20px 50px;
+  border: 0;
+  box-shadow: 0.2rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card_back button:hover {
+  transform: scale(1.1);
+}
+
+.card_back button a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+}
+
+.card_front_top_background {
+  position: relative;
+  height: 30%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://github.com/octaviandd/invite-Me/raw/master/pjimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.center {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* .center p {
+  width: 200px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+} */
+
+.center img {
+  height: 100%;
+  width: 100%;
+}
+.center h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+/* @media screen and (max-width: 600px) {
+  .main {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+} */
+
+* footer- > social links */ .svg-inline--fa {
+  vertical-align: -0.2em;
+}
+
+.rounded-social-buttons {
+  align-items: center;
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter,
+.fa-linkedin,
+.fa-github,
+.fa-medium {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.twitter {
+  background: #55acee;
+}
+
+.rounded-social-buttons .social-button.twitter:hover,
+.rounded-social-buttons .social-button.twitter:focus {
+  color: #55acee;
+  background: #fefefe;
+  border-color: #55acee;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover,
+.rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.github {
+  background: #161616;
+}
+
+.rounded-social-buttons .social-button.github:hover,
+.rounded-social-buttons .social-button.github:focus {
+  color: #131111;
+  background: #fefefe;
+  border-color: #131111;
+}
+
+.rounded-social-buttons .social-button.medium {
+  background: #30243b;
+}
+
+.rounded-social-buttons .social-button.medium:hover,
+.rounded-social-buttons .social-button.medium:focus {
+  color: #14181b;
+  background: #fefefe;
+  border-color: #14181b;
+}
